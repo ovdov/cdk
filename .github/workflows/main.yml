@@ -42,7 +42,7 @@ jobs:
           # run cdk bootstrap
           cdk bootstrap
       
-      - name: Diff AWS
+      - name: Deploy AWS
         run: cdk deploy
 
       
