@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  compare-resources:
+  deploy:
     runs-on: ubuntu-latest
     steps:
 
@@ -30,6 +30,10 @@ jobs:
           source .venv/bin/activate
           python -m pip install -r requirements.txt
 
+      - name: CDK bootstrap
+        run: |
+          # run cdk bootstrap
+          cdk bootstrap
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@master
