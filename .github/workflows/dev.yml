@@ -27,6 +27,9 @@ jobs:
           python -m pip install --upgrade pip
           # install  Python dependencies
           npm install -g aws-cdk
+          source .venv/bin/activate
+          pip install -r requirements.txt
+
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@master
